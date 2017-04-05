@@ -1,0 +1,11 @@
+select
+   owner,
+   object_name, 
+   object_type, 
+   last_ddl_time
+from
+   dba_objects
+where 
+   object_type = 'TABLE'
+and
+  object_name = upper('object_name');
